@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PSX Snapshot Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>PSX Snapshot Viewer</h1>
+      <p class="sub">Demo · Sample data (not live)</p>
+    </header>
+
+    <section class="controls">
+      <input type="text" id="search" placeholder="Search symbol e.g. HBL" />
+      <button id="btnFilter">Filter</button>
+      <button id="btnReset">Reset</button>
+    </section>
+
+    <section class="calc">
+      <h2>Quick P/L</h2>
+      <div class="row">
+        <label>Buy Price</label>
+        <input type="number" id="buy" value="315" step="0.01" />
+      </div>
+      <div class="row">
+        <label>Sell Price</label>
+        <input type="number" id="sell" value="320" step="0.01" />
+      </div>
+      <div class="row">
+        <label>Shares</label>
+        <input type="number" id="shares" value="100" step="1" />
+      </div>
+      <div class="result" id="pl">Net P/L: —</div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Current</th>
+            <th>Change %</th>
+            <th>Sector</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
